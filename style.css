@@ -1,14 +1,9 @@
 /*todo*/
-/*Convert icons to svg*/
 /*Fix the circle sizing*/
 /*image lazy loading*/
 /*fix dot alignment*/
-
-/*@mixin media ($width) {
-  @media (min-width: $width) {
-    @content;
-  }
-}*/
+/*refactor code (media queries)*/
+/*carousel*/
 
 *,
 *:before,
@@ -57,7 +52,7 @@ a {
 @media (min-width: 1200px) {
 	.margin-wrapper {
 		margin: 0 auto;
-		max-width: 90rem;
+		max-width: 75rem;
 	}
 }
 
@@ -253,9 +248,16 @@ a {
 	}
 }
 
+@media (min-width: 1200px) {
+	.text__main {
+		max-width: 18rem;
+	}
+}
+
 .text__icon svg {
 	width: 16px;
 	height: 16px;
+	margin-bottom: -2px;
 }
 
 /*FOOTER*/
@@ -295,6 +297,11 @@ a {
 .footer__icon svg {
 	width: 8px;
 	height: 8px;
+	margin-bottom: -1.5px;
+}
+
+.footer__icon {
+
 }
 
 /*BORDER*/
@@ -306,13 +313,20 @@ a {
 	border-top: 1px solid rgba(155, 155, 155, .5);
 }
 
+@media (min-width: 1200px) {
+	.border {
+		width: 70%;
+	}
+}
+
 .border::before {
 	content: '. . .';
 	font-size: 1em;
 	color: rgba(155, 155, 155, .8);
 	position: absolute;
 	background-color: #FAF9F6;
-	top: -.945em;
+	top: -.9em;
+	/*line-height: 0;*/
 }
 
 .bottom-border::before {
@@ -335,6 +349,10 @@ a {
 @media (min-width: 500px) {
 	.mobile-not-hidden {
 		display: none;
+	}
+
+	.bottom-border{
+		margin-left: 30%;
 	}
 }
 
