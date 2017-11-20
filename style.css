@@ -1,0 +1,22 @@
+/*@mixin media ($width) {
+  @media (min-width: $width) {
+    @content;
+  }
+}*/
+
+*,
+*:before,
+*:after {
+  border: 1px solid lightblue;
+  box-sizing: border-box;
+}
+
+.clearfix:after {
+  content: "";
+  display: table;
+  clear: both;
+}
+
+body {
+	/*background-color: black;*/
+}
