@@ -35,8 +35,15 @@ a {
 	text-decoration: none;
 }
 
-.main-wrapper {
+.margin-wrapper {
+		display: flex;
+		min-height: 100vh;
+		flex-direction: column;
 		margin: 2em 4em;
+}
+
+.main-section {
+	flex-grow: 1;
 }
 
 .border {
@@ -45,12 +52,17 @@ a {
 	width: 100%;
 	border-top: 1px solid rgba(155, 155, 155, .5);
 }
+
+.top-border {
+	flex-grow: 1;
+}
 /*HEADING*/
 .section__heading {
+
 }
 
 .heading__title {
-	margin-top: 1em;
+	/*margin-top: 1em;*/
 	text-transform: lowercase;
 	font-weight: 500;
 }
@@ -117,7 +129,8 @@ a {
 
 /*FOOTER*/
 .section__footer {
-	margin-top: 3em;
+	flex-grow: 1;
+	margin-top: 2em;
 	text-align: right;
 }
 
