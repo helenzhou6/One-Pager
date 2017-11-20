@@ -2,6 +2,7 @@
 /*Convert icons to svg*/
 /*Fix the circle sizing*/
 /*image lazy loading*/
+/*fix dot alignment*/
 
 /*@mixin media ($width) {
   @media (min-width: $width) {
@@ -27,6 +28,7 @@ body {
 	color: #2E2E2E;
 	font-family: 'Roboto', sans-serif;
 	margin: 0;
+	font-size: calc(1rem + .01vh);
 }
 
 a {
@@ -41,6 +43,23 @@ a {
 		flex-direction: column;
 		padding: 2rem 4rem;
 }
+@media (min-width: 500px) {
+	.margin-wrapper {
+		padding: 3rem 7rem;
+	}
+}
+@media (min-width: 900px) {
+	.margin-wrapper {
+		padding: 4rem 12rem;
+	}
+}
+
+@media (min-width: 1200px) {
+	.margin-wrapper {
+		margin: 0 auto;
+		max-width: 90rem;
+	}
+}
 
 .main-section {
 	flex-grow: 1;
@@ -49,9 +68,30 @@ a {
 .top-border {
 	flex-grow: .8;
 }
+
 /*HEADING*/
 .section__heading {
 
+}
+
+@media (min-width: 500px) {
+	.section__heading   {
+		margin-top: 3rem;
+	}
+}
+
+@media (min-width: 900px) {
+	.section__heading   {
+		margin-top: 4rem;
+	}
+}
+
+@media (min-width: 1200px) {
+	.section__heading   {
+		width: 40%;
+		margin-top: 0;
+		float: left;
+	}
 }
 
 .heading__title {
@@ -60,8 +100,19 @@ a {
 }
 
 .title {
-	font-size: 2.5rem;
+	font-size: 2.2rem;
 	position: relative;
+}
+
+@media (min-width: 500px) {
+	.title {
+		font-size: 2.8rem;
+	}
+}
+@media (min-width: 900px) {
+	.title {
+		font-size: 3.6rem;
+	}
 }
 
 .title__second {
@@ -75,6 +126,19 @@ a {
 	margin-top: 2.8em;
 }
 
+@media (min-width: 900px) {
+	.section__photo {
+		margin-top: 3.8em;
+	}
+}
+
+@media (min-width: 1200px) {
+	.section__photo   {
+		width: 60%;
+		float: left;
+	}
+}
+
 .photo {
 	position: relative;
 }
@@ -85,7 +149,7 @@ a {
 
 .photo::after {
 	position: absolute;
-	top: -1em;
+	top: -10%;
 	right: 0;
 	content: '';
 	background-color: rgba(248, 231, 28, .4);
@@ -94,14 +158,80 @@ a {
 	height: 120%;
 	border-radius: 50%;
 }
+
+.photo__caption {
+	display: none;
+	font-size: .5rem;
+	text-transform: uppercase;
+	letter-spacing: .15rem;
+	margin-top: .7rem;
+}
+
+@media (min-width: 900px) {
+	.photo__caption {
+		font-size: .5rem;
+		letter-spacing: .2rem;
+		margin-top: .8rem;
+	}
+}
+
+@media (min-width: 1200px) {
+	.photo__caption  {
+		font-size: .7rem;
+		margin-top: .9rem;
+		letter-spacing: .21rem;
+	}
+}
+
+.photo__text {
+	display: inline-block;
+}
+
+.photo__text::after {
+	content:'→';
+	cursor: pointer;
+}
+
+.photo__text::before {
+	content: '←';
+	cursor: pointer;
+}
+
+.photo__link:hover {
+	transform: translateX(1em);
+}
+
 /*TEXT*/
 .section__text {
 	margin-top: 1.6em;
 }
 
+@media (min-width: 900px) {
+	.section__text {
+		margin-top: 2.3em;
+	}
+}
+
+@media (min-width: 1200px) {
+	.section__text   {
+		width: 40%;
+		float: left;
+		margin-top: -30%;
+		padding-right: 2rem;
+	}
+}
+
 .text__list-heading {
 	margin-top: 1.5em;
 	margin-bottom: 0;
+}
+
+@media (min-width: 900px) {
+	.text__list-heading {
+		margin-top: 1.2em;
+		line-height: 1.8rem;
+		font-size: 1.2rem;
+	}
 }
 
 .text__list {
@@ -112,10 +242,20 @@ a {
 
 .text__main {
 	line-height: 1.6rem;
+	max-width: 20rem;
 }
 
-.text__icon {
+@media (min-width: 900px) {
+	.text__main {
+		line-height: 1.8rem;
+		max-width: 23rem;
+		font-size: 1.2rem;
+	}
+}
 
+.text__icon svg {
+	width: 16px;
+	height: 16px;
 }
 
 /*FOOTER*/
@@ -125,16 +265,36 @@ a {
 	text-align: right;
 }
 
+@media (min-width: 500px) {
+	.section__footer {
+		margin-top: 3rem;
+	}
+}
+
+@media (min-width: 900px) {
+	.section__footer {
+		margin-top: 5rem;
+	}
+}
+
 .footer__text {
 	text-transform: uppercase;
 	color: #9B9B9B;
 	font-size: .4rem;
 	letter-spacing: .16rem;
+	margin-right: -.16rem;
 }
 
-.footer__icon {
-	width: 6px;
-	height: 6px;
+@media (min-width: 1200px) {
+	.footer__text {
+		font-size: .5rem;
+		letter-spacing: .18rem;
+	}
+}
+
+.footer__icon svg {
+	width: 8px;
+	height: 8px;
 }
 
 /*BORDER*/
@@ -147,20 +307,39 @@ a {
 }
 
 .border::before {
-	content: '...';
-	font-size: .8em;
+	content: '. . .';
+	font-size: 1em;
 	color: rgba(155, 155, 155, .8);
 	position: absolute;
 	background-color: #FAF9F6;
 	top: -.945em;
 }
 
-.top-border::before {
-	padding-right: .09em;
-	left: 0;
+.bottom-border::before {
+	padding-right: .34em;
+	left: -.16em;
 }
 
-.bottom-border::before {
-	padding-left: .09em;
+.top-border::before {
+	padding-left: .34em;
 	right: 0;
+}
+
+@media (min-width: 1200px) {
+	.top-border {
+		margin-bottom: 2rem;
+	}
+}
+
+/*UTILITY CLASSES*/
+@media (min-width: 500px) {
+	.mobile-not-hidden {
+		display: none;
+	}
+}
+
+@media (min-width: 500px) {
+	.mobile-is-hidden {
+		display: block;
+	}
 }
