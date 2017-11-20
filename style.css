@@ -1,3 +1,9 @@
+/*todo*/
+/*Convert icons to svg*/
+/*Fix the circle sizing*/
+/*Three dot border*/
+
+
 /*@mixin media ($width) {
   @media (min-width: $width) {
     @content;
@@ -30,31 +36,64 @@ a {
 }
 
 .main-wrapper {
-		margin: 3em;
+		margin: 2em 4em;
 }
 
+.border {
+	content: '';
+	display: block;
+	width: 100%;
+	border-top: 1px solid rgba(155, 155, 155, .5);
+}
 /*HEADING*/
 .section__heading {
-
 }
 
 .heading__title {
+	margin-top: 1em;
 	text-transform: lowercase;
 	font-weight: 500;
 }
 
+.title {
+	font-size: 1.3em;
+	position: relative;
+}
+
+.title__second {
+	position: absolute;
+	bottom: -0.36em;
+	right: -1.98em;
+}
+
 /*PHOTO*/
 .section__photo {
-
+	margin-top: 2.8em;
 }
 
 .photo {
-	width: 100%;
+	position: relative;
 }
 
+.photo-img {
+	width: 80%;
+}
+
+.photo::after {
+	position: absolute;
+	top: -1em;
+	right: 0;
+	content: '';
+	background-color: rgba(248, 231, 28, .4);
+	display: block;
+	/*NEED TO ADJUST TO RATIO OF PHOTO*/
+	width: 65%;
+	height: 115%;
+	border-radius: 50%;
+}
 /*TEXT*/
 .section__text {
-
+	margin-top: 1.5em;
 }
 
 .text__list-heading {
@@ -63,20 +102,48 @@ a {
 }
 
 .text__list {
-	margin-top: 0.3em;
+	margin-top: .3em;
 	padding-left: 1em;
-	line-height: 1.5em;
+	line-height: 1.4em;
 }
 
 .text__main {
-	line-height: 1.5em;
+	line-height: 1.6em;
+}
+
+.text__icon {
+
 }
 
 /*FOOTER*/
 .section__footer {
+	margin-top: 3em;
+	text-align: right;
+}
+
+/*FIX THIS*/
+/*.circle {
+	position: absolute;
+	right: 0;
+	top: -.115em;
+	margin-right: 1em;
+	content: '...';
+	display: block;
+	height: 2px;
+	border-radius: 50%;
+	background-color: rgba(155, 155, 155, 1);
+	width: 2px;
+}*/
+
+
+.footer__text {
 	text-transform: uppercase;
 	color: #9B9B9B;
-	font-size: 0.5em;
-	letter-spacing: 0.3em;
-	text-align: right;
+	font-size: .4em;
+	letter-spacing: .32em;
+}
+
+.footer__icon {
+	width: 6px;
+	height: 6px;
 }
