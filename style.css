@@ -18,5 +18,40 @@
 }
 
 body {
-	/*background-color: black;*/
+	background-color: #FAF9F6;
+	color: #2E2E2E;
+	font-family: 'Roboto', sans-serif;
+}
+
+a {
+	color: #2E2E2E;
+	font-weight: 500;
+	text-decoration: none;
+}
+
+/*HEADING*/
+.section__heading {
+
+}
+
+.heading__title {
+	text-transform: lowercase;
+	font-weight: 500;
+}
+
+/*PHOTO*/
+.section__photo {
+
+}
+
+.photo {
+	width: 70%;
+}
+
+/*TEXT*/
+.section__text {
+
+}
+.text__list {
+	padding-left: 1em;
 }
