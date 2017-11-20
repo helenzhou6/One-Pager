@@ -1,8 +1,7 @@
 /*todo*/
 /*Convert icons to svg*/
 /*Fix the circle sizing*/
-/*Three dot border*/
-
+/*image lazy loading*/
 
 /*@mixin media ($width) {
   @media (min-width: $width) {
@@ -27,6 +26,7 @@ body {
 	background-color: #FAF9F6;
 	color: #2E2E2E;
 	font-family: 'Roboto', sans-serif;
+	margin: 0;
 }
 
 a {
@@ -36,25 +36,18 @@ a {
 }
 
 .margin-wrapper {
-		display: flex;
 		min-height: 100vh;
+		display: flex;
 		flex-direction: column;
-		margin: 2em 4em;
+		padding: 2rem 4rem;
 }
 
 .main-section {
 	flex-grow: 1;
 }
 
-.border {
-	content: '';
-	display: block;
-	width: 100%;
-	border-top: 1px solid rgba(155, 155, 155, .5);
-}
-
 .top-border {
-	flex-grow: 1;
+	flex-grow: .8;
 }
 /*HEADING*/
 .section__heading {
@@ -62,13 +55,12 @@ a {
 }
 
 .heading__title {
-	/*margin-top: 1em;*/
 	text-transform: lowercase;
 	font-weight: 500;
 }
 
 .title {
-	font-size: 1.3em;
+	font-size: 2.5rem;
 	position: relative;
 }
 
@@ -88,7 +80,7 @@ a {
 }
 
 .photo-img {
-	width: 80%;
+	width: 85%;
 }
 
 .photo::after {
@@ -98,14 +90,13 @@ a {
 	content: '';
 	background-color: rgba(248, 231, 28, .4);
 	display: block;
-	/*NEED TO ADJUST TO RATIO OF PHOTO*/
-	width: 65%;
-	height: 115%;
+	width: 68%;
+	height: 120%;
 	border-radius: 50%;
 }
 /*TEXT*/
 .section__text {
-	margin-top: 1.5em;
+	margin-top: 1.6em;
 }
 
 .text__list-heading {
@@ -120,7 +111,7 @@ a {
 }
 
 .text__main {
-	line-height: 1.6em;
+	line-height: 1.6rem;
 }
 
 .text__icon {
@@ -134,29 +125,42 @@ a {
 	text-align: right;
 }
 
-/*FIX THIS*/
-/*.circle {
-	position: absolute;
-	right: 0;
-	top: -.115em;
-	margin-right: 1em;
-	content: '...';
-	display: block;
-	height: 2px;
-	border-radius: 50%;
-	background-color: rgba(155, 155, 155, 1);
-	width: 2px;
-}*/
-
-
 .footer__text {
 	text-transform: uppercase;
 	color: #9B9B9B;
-	font-size: .4em;
-	letter-spacing: .32em;
+	font-size: .4rem;
+	letter-spacing: .16rem;
 }
 
 .footer__icon {
 	width: 6px;
 	height: 6px;
+}
+
+/*BORDER*/
+.border {
+	content: '';
+	display: block;
+	position: relative;
+	width: 100%;
+	border-top: 1px solid rgba(155, 155, 155, .5);
+}
+
+.border::before {
+	content: '...';
+	font-size: .8em;
+	color: rgba(155, 155, 155, .8);
+	position: absolute;
+	background-color: #FAF9F6;
+	top: -.945em;
+}
+
+.top-border::before {
+	padding-right: .09em;
+	left: 0;
+}
+
+.bottom-border::before {
+	padding-left: .09em;
+	right: 0;
 }
