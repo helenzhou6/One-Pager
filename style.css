@@ -1,12 +1,12 @@
 /*TO DO*/
 /*image lazy loading*/
 /*refactor code (media queries)*/
-/*carousel*/
 
 /*ROOM FOR IMPROVEMENT*/
 /*fix dot and HZ alignment*/
 /*Fix the circle sizing*/
 /*browerstack testing*/
+/*carousel*/
 
 /*EXTRA EXTRA*/
 /*animation on load?*/
@@ -150,15 +150,40 @@ a {
 	}
 }
 
-.photo {
+.photos {
+	padding-top: 50%;
 	position: relative;
+	overflow: hidden;
+}
+
+.photo {
+	transition: transform 1s;
+	position: absolute;
+	top: 0;
+	bottom: 0;
+	right: 0;
+	left: 0;
+	width: 100%;
+	height: 100%;
+}
+
+.photos > .first--js {
+	left: 0;
+}
+
+.photos > .second--js {
+	left: 100%;
+}
+.photos > .third--js {
+	left: 200%;
 }
 
 .photo-img {
 	width: 85%;
 }
 
-.photo::after {
+.photos::after {
+	z-index: 100;
 	position: absolute;
 	top: -10%;
 	right: 0;
@@ -195,17 +220,62 @@ a {
 }
 
 .photo__text {
-	display: inline-block;
+	/*display: inline-block;*/
+	transition: transform 1s;
+	text-align: center;
+	position: absolute;
+  width: 100%;
 }
 
-.photo__text::after {
-	content:'→';
+
+.caption {
 	display: inline-block;
+	width: 5.5rem;
+	height: 1.2rem;
+	padding-top: .2rem;
+	position: relative;
+	overflow: hidden;
+}
+
+@media (min-width: 500px) {
+	.caption {
+		padding-top: .54rem;
+	}
+}
+
+@media (min-width: 900px) {
+	.caption {
+		width: 7rem;
+	}
+}
+
+@media (min-width: 1200px) {
+	.caption {
+		padding-top: .35rem;
+	}
+}
+
+.caption > .one--js {
+	left: 0;
+}
+
+.caption > .two--js {
+	left: 100%;
+}
+
+.caption > .three--js {
+	left: 200%;
+}
+
+.left-arrow {
+	display: inline-block;
+	vertical-align: super;
 	cursor: pointer;
 }
 
-.photo__text::before {
-	content: '←';
+.right-arrow {
+	display: inline-block;
+	vertical-align: super;
 	cursor: pointer;
 }
 
@@ -268,6 +338,7 @@ a {
 @media (min-width: 1200px) {
 	.text__main {
 		max-width: 18rem;
+		margin-top: 3.2rem;
 	}
 }
 
