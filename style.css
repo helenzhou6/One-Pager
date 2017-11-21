@@ -1,9 +1,17 @@
-/*todo*/
-/*Fix the circle sizing*/
+/*TO DO*/
 /*image lazy loading*/
-/*fix dot alignment*/
 /*refactor code (media queries)*/
 /*carousel*/
+
+/*ROOM FOR IMPROVEMENT*/
+/*fix dot and HZ alignment*/
+/*Fix the circle sizing*/
+/*browerstack testing*/
+
+/*EXTRA EXTRA*/
+/*animation on load?*/
+/*arrows move on hover*/
+/*circle movement on hover*/
 
 *,
 *:before,
@@ -40,11 +48,13 @@ a {
 }
 @media (min-width: 500px) {
 	.margin-wrapper {
+		margin-top: 1.2rem;
 		padding: 3rem 7rem;
 	}
 }
 @media (min-width: 900px) {
 	.margin-wrapper {
+		margin-top: 0;
 		padding: 4rem 12rem;
 	}
 }
@@ -112,18 +122,24 @@ a {
 
 .title__second {
 	position: absolute;
-	bottom: -0.36em;
+	bottom: -0.4em;
 	right: -1.98em;
 }
 
 /*PHOTO*/
 .section__photo {
-	margin-top: 2.8em;
+	margin-top: 2.4em;
+}
+
+@media (min-width: 500px) {
+	.section__photo {
+		margin-top: 2.8em;
+	}
 }
 
 @media (min-width: 900px) {
 	.section__photo {
-		margin-top: 3.8em;
+		margin-top: 3.6em;
 	}
 }
 
@@ -172,8 +188,8 @@ a {
 
 @media (min-width: 1200px) {
 	.photo__caption  {
-		font-size: .7rem;
-		margin-top: .9rem;
+		font-size: .6rem;
+		margin-top: .8rem;
 		letter-spacing: .21rem;
 	}
 }
@@ -184,6 +200,7 @@ a {
 
 .photo__text::after {
 	content:'→';
+	display: inline-block;
 	cursor: pointer;
 }
 
@@ -231,7 +248,7 @@ a {
 
 .text__list {
 	margin-top: .3em;
-	padding-left: 1em;
+	padding-left: 1.8rem;
 	line-height: 1.4em;
 }
 
@@ -289,8 +306,8 @@ a {
 
 @media (min-width: 1200px) {
 	.footer__text {
-		font-size: .5rem;
-		letter-spacing: .18rem;
+		font-size: .45rem;
+		letter-spacing: .17rem;
 	}
 }
 
@@ -343,6 +360,9 @@ a {
 	.top-border {
 		margin-bottom: 2rem;
 	}
+	.bottom-border{
+		margin-left: 30%;
+	}
 }
 
 /*UTILITY CLASSES*/
@@ -350,13 +370,6 @@ a {
 	.mobile-not-hidden {
 		display: none;
 	}
-
-	.bottom-border{
-		margin-left: 30%;
-	}
-}
-
-@media (min-width: 500px) {
 	.mobile-is-hidden {
 		display: block;
 	}
