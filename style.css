@@ -1,12 +1,17 @@
 /*TO DO*/
+/*DESKTOP VERSION*/
+/*mobile view: circle bug*/
 /*image lazy loading*/
-/*refactor code (media queries)*/
+/*refactor code (esp media queries)*/
+/*where is my favicon?*/
+/*title: letterspacing -0.04rem*/
 
 /*ROOM FOR IMPROVEMENT*/
-/*fix dot and HZ alignment*/
+/*fix dot, arrows and HZ alignment*/
 /*Fix the circle sizing*/
 /*browerstack testing*/
-/*carousel*/
+/*carousel javascript refactor*/
+/*first arrow should be greyed and unclickable*/
 
 /*EXTRA EXTRA*/
 /*animation on load?*/
@@ -129,6 +134,7 @@ a {
 /*PHOTO*/
 .section__photo {
 	margin-top: 2.4em;
+	position: relative;
 }
 
 @media (min-width: 500px) {
@@ -151,7 +157,7 @@ a {
 }
 
 .photos {
-	padding-top: 50%;
+	padding-top: 65.689%;
 	position: relative;
 	overflow: hidden;
 }
@@ -182,16 +188,16 @@ a {
 	width: 85%;
 }
 
-.photos::after {
+.section__photo::after {
 	z-index: 100;
 	position: absolute;
-	top: -10%;
+	top: -15%;
 	right: 0;
 	content: '';
 	background-color: rgba(248, 231, 28, .4);
 	display: block;
-	width: 68%;
-	height: 120%;
+	width: 71.87%;
+	height: 93%;
 	border-radius: 50%;
 }
 
