@@ -264,8 +264,7 @@ a {
   .section__text {
     width: 38%;
     float: left;
-    /*bad practice:*/
-    margin-top: -19rem;
+    margin-top: -20.7rem;
     padding-right: 2rem; } }
 
 .text__list-heading {
@@ -338,6 +337,10 @@ li {
 @media (min-width: 900px) {
   .section__footer {
     margin-top: 5rem; } }
+
+@media (min-width: 1200px) {
+  .section__footer {
+    margin-top: 3.1rem; } }
 
 .footer__text {
   text-transform: uppercase;
