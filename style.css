@@ -1,16 +1,13 @@
 /*TO DO*/
 /*DESKTOP VERSION*/
-/*mobile view: circle bug*/
 /*image lazy loading*/
-/*refactor code (esp media queries)*/
-/*where is my favicon?*/
-/*title: letterspacing -0.04rem*/
 
 /*ROOM FOR IMPROVEMENT*/
-/*fix dot, arrows and HZ alignment*/
-/*Fix the circle sizing*/
+/*fix dot, arrows and HZ alignment (safari)*/
+/*Fix the circle sizing -- esp mobile*/
 /*browerstack testing*/
 /*carousel javascript refactor*/
+/*refactor code (esp media queries)*/
 /*first arrow should be greyed and unclickable*/
 
 /*EXTRA EXTRA*/
@@ -81,7 +78,8 @@ a {
 
 /*HEADING*/
 .section__heading {
-
+	position: relative;
+	z-index: 10;
 }
 
 @media (min-width: 500px) {
@@ -98,8 +96,8 @@ a {
 
 @media (min-width: 1200px) {
 	.section__heading   {
-		width: 40%;
-		margin-top: 0;
+		width: 29%;
+		margin-top: 1.5rem;
 		float: left;
 	}
 }
@@ -112,6 +110,7 @@ a {
 .title {
 	font-size: 2.2rem;
 	position: relative;
+	letter-spacing: -0.02rem;
 }
 
 @media (min-width: 500px) {
@@ -125,10 +124,16 @@ a {
 	}
 }
 
+@media (min-width: 1200px) {
+	.title {
+		font-size: 4.3rem;
+	}
+}
+
 .title__second {
 	position: absolute;
-	bottom: -0.4em;
-	right: -1.98em;
+	bottom: -0.35em;
+	right: -1.95em;
 }
 
 /*PHOTO*/
@@ -151,7 +156,7 @@ a {
 
 @media (min-width: 1200px) {
 	.section__photo   {
-		width: 60%;
+		width: 71%;
 		float: left;
 	}
 }
@@ -219,9 +224,9 @@ a {
 
 @media (min-width: 1200px) {
 	.photo__caption  {
-		font-size: .6rem;
-		margin-top: .8rem;
-		letter-spacing: .21rem;
+		font-size: .7rem;
+		margin-top: .7rem;
+		letter-spacing: .25rem;
 	}
 }
 
@@ -291,6 +296,8 @@ a {
 
 /*TEXT*/
 .section__text {
+	position: relative;
+	z-index: 10;
 	margin-top: 1.6em;
 }
 
@@ -302,9 +309,10 @@ a {
 
 @media (min-width: 1200px) {
 	.section__text   {
-		width: 40%;
+		width: 38%;
 		float: left;
-		margin-top: -30%;
+		/*bad practice:*/
+		margin-top: -19rem;
 		padding-right: 2rem;
 	}
 }
@@ -319,6 +327,12 @@ a {
 		margin-top: 1.2em;
 		line-height: 1.8rem;
 		font-size: 1.2rem;
+	}
+}
+
+@media (min-width: 1200px) {
+	.text__list-heading {
+		font-size: 1.3rem;
 	}
 }
 
@@ -344,7 +358,8 @@ a {
 @media (min-width: 1200px) {
 	.text__main {
 		max-width: 18rem;
-		margin-top: 3.2rem;
+		font-size: 1.3rem;
+		line-height: 1.9rem;
 	}
 }
 
