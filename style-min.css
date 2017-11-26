@@ -58,6 +58,7 @@ a {
 
 @media (min-width: 1200px) {
   .margin-wrapper {
+    padding: 2rem 10rem;
     margin: 0 auto;
     max-width: 75rem; } }
 
@@ -192,7 +193,7 @@ a {
 @media (min-width: 1200px) {
   .photo__caption {
     font-size: .7rem;
-    margin-top: .7rem;
+    margin-top: .9rem;
     letter-spacing: .25rem; } }
 
 .photo__text {
@@ -207,7 +208,7 @@ a {
 
 .caption {
   display: inline-block;
-  width: 5.5rem;
+  min-width: 5.5rem;
   height: 1.2rem;
   padding-top: .2rem;
   position: relative;
@@ -219,11 +220,12 @@ a {
 
 @media (min-width: 900px) {
   .caption {
-    width: 7rem; } }
+    min-width: 7rem; } }
 
 @media (min-width: 1200px) {
   .caption {
-    padding-top: .35rem; } }
+    min-width: 8rem;
+    padding-top: .25rem; } }
 
 .caption > .one--js {
   left: 0; }
@@ -281,9 +283,24 @@ a {
     font-size: 1.3rem; } }
 
 .text__list {
-  margin-top: .3em;
+  margin-top: .6em;
   padding-left: 1.8rem;
-  line-height: 1.4em; }
+  line-height: 1.3em; }
+
+ol {
+  list-style: none;
+  counter-reset: li; }
+
+li::before {
+  content: counter(li);
+  font-weight: 500;
+  font-size: .7rem;
+  display: inline-block;
+  width: 1em;
+  margin-left: -1em; }
+
+li {
+  counter-increment: li; }
 
 .text__main {
   line-height: 1.6rem;
