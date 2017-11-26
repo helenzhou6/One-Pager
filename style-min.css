@@ -1,5 +1,5 @@
 /*TO DO*/
-/*DESKTOP VERSION*/
+/*DESKTOP VERSION -- margin top of text*/
 /*image lazy loading*/
 /*ROOM FOR IMPROVEMENT*/
 /*fix dot, arrows and HZ alignment (safari)*/
@@ -58,9 +58,13 @@ a {
 
 @media (min-width: 1200px) {
   .margin-wrapper {
-    padding: 2rem 10rem;
+    padding: 1.5rem 10rem;
     margin: 0 auto;
     max-width: 75rem; } }
+
+@media (min-width: 1500px) {
+  .margin-wrapper {
+    max-width: 130rem; } }
 
 .main-section {
   -webkit-box-flex: 1;
@@ -111,6 +115,10 @@ a {
 @media (min-width: 1200px) {
   .title {
     font-size: 4.3rem; } }
+
+@media (min-width: 1500px) {
+  .title {
+    font-size: calc(5rem + 2vw); } }
 
 .title__second {
   position: absolute;
@@ -267,6 +275,10 @@ a {
     margin-top: -20.7rem;
     padding-right: 2rem; } }
 
+@media (min-width: 1500px) {
+  .section__text {
+    margin-top: calc(-36% - 2rem); } }
+
 .text__list-heading {
   margin-top: 1.5em;
   margin-bottom: 0; }
@@ -280,6 +292,11 @@ a {
 @media (min-width: 1200px) {
   .text__list-heading {
     font-size: 1.3rem; } }
+
+@media (min-width: 1500px) {
+  .text__list-heading {
+    max-width: 30rem;
+    font-size: calc(1.5rem + .5vw); } }
 
 .text__list {
   margin-top: .6em;
@@ -317,10 +334,21 @@ li {
     font-size: 1.3rem;
     line-height: 1.9rem; } }
 
+@media (min-width: 1500px) {
+  .text__main {
+    max-width: 30rem;
+    font-size: calc(1.5rem + .5vw);
+    line-height: normal; } }
+
 .text__icon svg {
   width: 16px;
   height: 16px;
   margin-bottom: -2px; }
+
+@media (min-width: 1500px) {
+  .text__icon svg {
+    width: 26px;
+    height: 26px; } }
 
 /*FOOTER*/
 .section__footer {
