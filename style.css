@@ -243,8 +243,15 @@ a {
 	}
 }
 
+
+@media (min-width: 1500px) {
+	.photo__caption  {
+		margin-top: 1.5rem;
+		font-size: .9rem;
+	}
+}
+
 .photo__text {
-	/*display: inline-block;*/
 	transition: transform 1s;
 	text-align: center;
 	position: absolute;
@@ -276,7 +283,14 @@ a {
 @media (min-width: 1200px) {
 	.caption {
 		min-width: 8rem;
-		padding-top: .25rem;
+		padding-top: .35rem;
+	}
+}
+
+@media (min-width: 1500px) {
+	.caption  {
+		min-width: 11rem;
+		padding-top: 0;
 	}
 }
 

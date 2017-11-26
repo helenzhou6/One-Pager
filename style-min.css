@@ -204,8 +204,12 @@ a {
     margin-top: .9rem;
     letter-spacing: .25rem; } }
 
+@media (min-width: 1500px) {
+  .photo__caption {
+    margin-top: 1.5rem;
+    font-size: .9rem; } }
+
 .photo__text {
-  /*display: inline-block;*/
   -webkit-transition: -webkit-transform 1s;
   transition: -webkit-transform 1s;
   transition: transform 1s;
@@ -233,7 +237,12 @@ a {
 @media (min-width: 1200px) {
   .caption {
     min-width: 8rem;
-    padding-top: .25rem; } }
+    padding-top: .35rem; } }
+
+@media (min-width: 1500px) {
+  .caption {
+    min-width: 11rem;
+    padding-top: 0; } }
 
 .caption > .one--js {
   left: 0; }
