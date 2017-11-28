@@ -1,13 +1,12 @@
-/*TO DO*/
-/*DESKTOP VERSION -- margin top of text*/
-/*image lazy loading*/
 /*ROOM FOR IMPROVEMENT*/
+/*fix margin-top of section__text (flex reverse order?)*/
+/*image lazy loading plugin*/
 /*fix dot, arrows and HZ alignment (safari)*/
 /*Fix the circle sizing -- esp mobile*/
 /*browerstack testing*/
 /*carousel javascript refactor*/
-/*refactor code (esp media queries)*/
-/*first arrow should be greyed and unclickable*/
+/*refactor code (esp media queries -- use SASS)*/
+/*first arrow should be light grey and unclickable*/
 /*EXTRA EXTRA*/
 /*animation on load?*/
 /*arrows move on hover*/
@@ -102,7 +101,8 @@ a {
 .title {
   font-size: 2.2rem;
   position: relative;
-  letter-spacing: -0.02rem; }
+  letter-spacing: -0.02rem;
+  margin-left: -0.1rem; }
 
 @media (min-width: 500px) {
   .title {
@@ -122,8 +122,8 @@ a {
 
 .title__second {
   position: absolute;
-  bottom: -0.35em;
-  right: -1.95em; }
+  bottom: -0.38em;
+  right: -1.96em; }
 
 /*PHOTO*/
 .section__photo {
@@ -181,9 +181,14 @@ a {
   content: '';
   background-color: rgba(248, 231, 28, 0.4);
   display: block;
-  width: 71.87%;
-  height: 93%;
+  width: 67%;
+  height: 98%;
   border-radius: 50%; }
+
+@media (min-width: 500px) {
+  .section__photo::after {
+    width: 68%;
+    height: 92%; } }
 
 .photo__caption {
   display: none;
