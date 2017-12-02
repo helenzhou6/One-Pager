@@ -190,6 +190,24 @@ a {
 	height: 100%;
 }
 
+.photo__credits {
+	position: absolute;
+	bottom: 1em;
+	text-transform: uppercase;
+	letter-spacing: .2em;
+	right: calc(15% + 1em);
+	font-size: .4rem;
+	letter-spacing: .16rem;
+	color: white;
+}
+
+@media (min-width: 1200px) {
+	.photo__credits {
+		font-size: .45rem;
+		letter-spacing: .17rem;
+	}
+}
+
 .photos > .first--js {
 	left: 0;
 }
